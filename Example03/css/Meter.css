@@ -1,0 +1,129 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(-35deg);
+    /* background: darkslateblue; */
+}
+
+.meteors {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 2px rgb(241, 9, 9));
+    /* box-shadow: 0 0 1px rgb(255, 255, 255); */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 30%, rgba(241, 213, 85, 0.8));
+    animation: meteors-lengthen 2s ease infinite, meteors-move 2s ease-in-out infinite, meteors-opacity 2s ease-in-out infinite;
+}
+
+.meteors:nth-child(1) {
+    top: 27%;
+    left: 25%;
+    animation-delay: 0.1s;
+}
+
+.meteors:nth-child(2) {
+    top: 13%;
+    left: 60%;
+    animation-delay: 0.5s;
+}
+
+.meteors:nth-child(3) {
+    top: 32%;
+    left: 35%;
+    animation-delay: 0.42s;
+}
+
+.meteors:nth-child(4) {
+    top: 22%;
+    left: 54%;
+    animation-delay: 0.35s;
+}
+
+.meteors:nth-child(5) {
+    top: 22%;
+    left: 39%;
+    animation-delay: 0.63s;
+}
+
+.meteors:nth-child(6) {
+    top: 31%;
+    left: 57%;
+    animation-delay: 1.32s;
+}
+
+.meteors:nth-child(7) {
+    top: 11%;
+    left: 43%;
+    animation-delay: 1.51s;
+}
+
+.meteors:nth-child(8) {
+    top: 27%;
+    left: 49%;
+    animation-delay: 0.75s;
+}
+
+.meteors:nth-child(9) {
+    top: 30%;
+    left: 65%;
+    animation-delay: 0.43s;
+}
+
+.meteors:nth-child(10) {
+    top: 36%;
+    left: 46%;
+    animation-delay: 0.57s;
+}
+
+@keyframes meteors-lengthen {
+    0% {
+        height: 0;
+    }
+    70% {
+        height: 100px;
+    }
+    100% {
+        height: 0px;
+    }
+}
+
+@keyframes meteors-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(250px);
+    }
+}
+
+@keyframes meteors-opacity {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    1% {
+        opacity: 0.3;
+        display: block;
+    }
+    50% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.1;
+        display: none;
+    }
+}
